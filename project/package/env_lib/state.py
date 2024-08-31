@@ -58,7 +58,7 @@ class State:
     def _get_verbos(self): return self._verbos
     @autosaved
     def _set_verbos(self,v:Verbosity): self._verbos = v
-    verbos = property(fget=_get_verbos,fset=_set_verbos)
+    verbos:Verbosity = property(fget=_get_verbos,fset=_set_verbos)
 
     def _get_save_cb(self): return self._save_cb
     def _set_save_cb(self,save_cb:typing.Callable[[],None]): self._save_cb = save_cb

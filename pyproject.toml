@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 name = "jl95terceira_env"
 version = "0.1.0"
 authors = [
-  { name="Joao Luis, email="jl95terceira@gmail.com" },
+  { name="Joao Luis Ornelas da Silva", email="jl95terceira@gmail.com" },
 ]
 description = "Environment / State support, intended for use by CLI tools"
 readme = "README.md"
