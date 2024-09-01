@@ -1,9 +1,13 @@
-from env_lib import *
-from env_lib import _Global
+import argparse
+import builtins
+import os
+
+from envlib import *
+from envlib import (
+    _Global,
+)
 
 if __name__ == '__main__':
-
-    import argparse
 
     class P:
 

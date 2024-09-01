@@ -117,14 +117,16 @@ def reset_state():
         print(Verbosities.LOW, f'state file ({repr(STATE_FILEPATH)}) not found - nothing to remove')
 
 @load_ensured
-def var[T](name   :str,
-           type   :typing.Callable[[typing.Any],T]=str,
-           default:T|NoDefaultType                =NO_DEFAULT):
+def var[T](name       :str,
+           type       :typing.Callable[[typing.Any],T]=str,
+           description:str                            ='',
+           default    :T|NoDefaultType                =NO_DEFAULT):
 
     return Var(varmap =_Global.varmap,
-               name   =name,
-               type   =type,
-               default=default)
+               name       =name,
+               type       =type,
+               description=description,
+               default    =default)
 
 class EditorTypeNotValid(Exception): pass
 def _editor(o) -> typing.Callable[[typing.Any],str]:
