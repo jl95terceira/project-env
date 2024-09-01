@@ -40,7 +40,7 @@ python -m build
 A `.whl` is generated at directory `dist` which can then be `pip`-installed like so.
 
 ```
-pip install dist\jl95terceira_env-...whl
+pip install dist\jl95terceira_pytools_env-...whl
 ```
 
 The package will be installed under `site-packages` to `jl95terceira\pytools`, in accordance with `pyproject.toml`.
