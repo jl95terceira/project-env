@@ -4,7 +4,7 @@ A module to give to CLI tools support for persistent state / environment variabl
 
 Python version: >= **3.12**
 
-# Project structure
+# Getting around
 
 - `project\package` - package home directory path
 
