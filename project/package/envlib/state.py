@@ -1,7 +1,7 @@
 import pickle
 import typing
 
-from .util import *
+import jl95terceira.batteries as batt
 
 # If this class is not separated from env.py, problems arise with pickling.
 
@@ -14,7 +14,7 @@ class Verbosity:
 
 class Verbosities:
 
-    _e = Enumerator[Verbosity]()
+    _e = batt.Enumerator[Verbosity]()
 
     OFF       = _e(Verbosity(0,'Off'))
     LOW       = _e(Verbosity(1,'Low'))

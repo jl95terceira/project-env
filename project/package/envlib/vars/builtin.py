@@ -1,7 +1,9 @@
 import os.path
+import typing
 
-from ..util import *
 from .. import var
+
+import jl95terceira.batteries as batt
 
 class EditorTypeNotValid(Exception): pass
 def _editor(o) -> typing.Callable[[str],str]:
@@ -50,4 +52,4 @@ OPENSSL_HOME     = var(name       ='openssl.home',
                        default    ='the home of OpenSSL')
 TEMP             = var(name       ='temp', 
                        description='a directory that may be used to hold temporary files',
-                       default    ='C\\Temp' if is_this_windows() else '/tmp')
+                       default    =batt.os.TEMP_DIR)

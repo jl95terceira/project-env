@@ -1,4 +1,4 @@
-from ..util import *
+import typing
 
 class VarNotDefinedException(Exception):
 
