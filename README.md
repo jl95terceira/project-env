@@ -12,7 +12,7 @@ Python version: >= **3.12**
 
   See: https://hatch.pypa.io/latest/config/metadata/
 
-*NB*: The reason why the package home directory `package` is under directory `project` is to avoid having to rework the directory structure if we decide to make a test module. In that case, the test module path shall be `project\test`, we shall make `project` itself a module (via creating an empty `__init__.py` under it) and we shall use [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest).
+*NB*: The reason why the package home directory `package` is under directory `project` is to avoid having to rework the directory structure if we decide to make a test module. In that case, the test module path shall be `project\tests`, we shall make `project` itself a module (via creating an empty `__init__.py` under it) and we shall use [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest).
 
 # Build and install
 
