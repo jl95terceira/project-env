@@ -37,7 +37,7 @@ if __name__ == '__main__':
         level = int(levelrepr)
         if level not in envlib.state.VERBOSITY_BY_LEVEL:
 
-            print(envlib.Verbosities.LOW, f'verbosity level {level} not mapped')
+            print(envlib.state.Verbosities.LOW, f'verbosity level {level} not mapped')
             return
         
         _Global.state.verbos = envlib.state.VERBOSITY_BY_LEVEL[int(get('v'))]
