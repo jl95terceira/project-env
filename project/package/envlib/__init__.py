@@ -8,13 +8,14 @@ import typing
 from . import vars
 from . import state
 
-import jl95terceira.batteries as batt
+from   jl95terceira.batteries     import *
+import jl95terceira.batteries.sys as sysx
 
-_APPDATA_DIR_LASTNAME   = 'PYTOOLS-0732FEBD06784C248FD1AB7E046D92A6'
-_VARS_FILENAME          = '__ENV__.py'
-_STATE_FILENAME         = 'state.pkl'
-_APPDATA_DIR            = os.path.join(os.getenv('APPDATA') if batt.sys.is_this_windows() else \
-                                       pathlib.Path.home(), _APPDATA_DIR_LASTNAME)
+_APPDATA_DIR_LASTNAME  = 'PYTOOLS-0732FEBD06784C248FD1AB7E046D92A6'
+_VARS_FILENAME         = '__ENV__.py'
+_STATE_FILENAME        = 'state.pkl'
+_APPDATA_DIR           = os.path.join(os.getenv('APPDATA') if sysx.is_this_windows() else \
+                                      pathlib.Path.home(), _APPDATA_DIR_LASTNAME)
 VARS_FILEPATH          = os.path.join(_APPDATA_DIR, _VARS_FILENAME)
 STATE_FILEPATH         = os.path.join(_APPDATA_DIR ,_STATE_FILENAME)
 

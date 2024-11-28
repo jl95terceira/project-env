@@ -3,7 +3,7 @@ import typing
 
 from .. import var
 
-import jl95terceira.batteries as batt
+from jl95terceira.batteries import os as osx
 
 class EditorTypeNotValid(Exception): pass
 def _editor(o) -> typing.Callable[[str],str]:
@@ -22,7 +22,7 @@ def _editor(o) -> typing.Callable[[str],str]:
 EDITOR           = var(name       ='editor',
                        description='default text file editor',
                        type       =_editor,
-                       default   =_editor('notepad'))
+                       default    =_editor('notepad'))
 TEMP             = var(name       ='temp', 
                        description='a directory that may be used to hold temporary files',
-                       default    =batt.os.TEMP_DIR)
+                       default    =osx.TEMP_DIR)
