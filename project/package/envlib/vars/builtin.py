@@ -1,9 +1,9 @@
-import os.path
+import os.path as path
 import typing
 
 from .. import var
 
-from jl95terceira.batteries import os as osx
+from jl95terceira.batteries import os
 
 class EditorTypeNotValid(Exception): pass
 def _editor(o) -> typing.Callable[[str],str]:
@@ -13,7 +13,7 @@ def _editor(o) -> typing.Callable[[str],str]:
 
         try: 
             
-            r = o('test/file/path')
+            r = o(path.join('test','file','path'))
             if not isinstance(r, str): raise EditorTypeNotValid(o)
 
         except: raise EditorTypeNotValid(o)
@@ -25,4 +25,5 @@ EDITOR           = var(name       ='editor',
                        default    =_editor('notepad'))
 TEMP             = var(name       ='temp', 
                        description='a directory that may be used to hold temporary files',
-                       default    =osx.TEMP_DIR)
+                       type       =str,
+                       default    =os.TEMP_DIR)

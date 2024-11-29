@@ -118,7 +118,7 @@ def reset_state():
 
 @load_ensured
 def var[T](name       :str,
-           type       :typing.Callable[[typing.Any],T]=str,
+           type       :typing.Callable[[typing.Any],T]=object,
            description:str                            ='',
            default    :T|vars.NoDefaultType           =vars.NO_DEFAULT):
 
